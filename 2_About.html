@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html> 
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WBSC</title>
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+<script src="js/change.js"></script>
+
+<style>
+.ui-icon-favourites7 {
+    background-image: url("icon/favourites7.png");
+    background-size: 18px 18px;
+}
+
+
+</style>
+
+
+    
+</head>
+<body>
+
+<div data-role="page" id="about" class="jqm-demos ui-responsive-panel" data-url="about" >
+
+        <div data-role="header" data-position="fixed">
+              <a href="#nav-panel" data-icon="grid" data-iconpos="notext">Menu</a>
+              <h3>比賽由來</h3>
+            <a data-icon="back"  data-iconpos  ="notext"   data-rel="back"></a>
+        </div>
+        
+    <div data-role="content">
+         <div   class="ui-corner-all custom-corners" >
+             <div class="ui-bar ui-bar-a">
+                <p style="text-align: center"><strong>（WBSC Premier 12）</strong></p>
+             </div>
+             <div class="ui-bar ui-bar-a">
+                <img style="width: 100% ;height:auto" src="img/headerimg.PNG">
+                <p>是世界棒壘球聯盟（WBSC）所舉辦的國際棒球賽事。世界棒壘球聯盟因應世界盃棒球賽於2011年走入歷史，世界性的頂級棒球賽事僅存世界棒球經典賽（World Baseball Classic），特別於相鄰兩屆的世界棒球經典賽中間新創此項賽事，使頂級賽會的間隔期間不至於過長。</p>
+             </div>
+         </div>
+      <p></p></br>
+
+         <div  class="ui-corner-all custom-corners">
+             <div class="ui-bar ui-bar-a">
+                <p style="text-align: center"><strong>出賽國家</strong></p>
+             </div>
+             <div class="ui-bar ui-bar-a">
+                <div id="pageone" data-role="main" class="ui-content" >
+                       <a href="#myPopup" data-rel="popup" data-position-to="window"  data-transition="slideup">
+                       <img style="width: 100%" style="height:auto" src="img/country.jpg" ></a>
+                     
+                    <div data-role="popup" id="myPopup">
+                           <a href="#pageone" data-role="button"  data-inline="true" data-shadow="false"
+                               data-icon="delete" data-iconpos="notext"   class=" ui-btn-right">
+                           </a>
+                           <img style="width: 100%" style="height:100%" src="img/country.jpg">
+                     </div>
+               </div> 
+             </div>
+         </div>
+         <p></p></br>
+
+    <div  class="ui-corner-all custom-corners">
+         <div class="ui-bar ui-bar-a">
+             <p style="text-align: center"><strong>比賽結果</strong></p>
+         </div>
+         <div class="ui-bar ui-bar-a">
+         <div id="pagetwo" data-role="main" class="ui-content">
+              <a href="#myPopup1" data-rel="popup" data-position-to="window"  data-transition="slideup">
+              <img  data-transition="slideup" style="width: 100%" style="height:auto" src="img/GG.png"></a>
+               <div data-role="popup" id="myPopup1">
+                 <a href="#pagetwo" data-role="button"  data-inline="true" data-shadow="false" data-icon="delete" data-iconpos="notext"   class=" ui-btn-right"></a>
+                  <img style="width: 100%" style="height:100%" src="img/gg.png">
+               </div>
+         </div>
+         </div>
+    </div>
+</div>
+  
+    
+    <div data-role="footer" data-position="fixed" >
+        <div data-role="navbar">
+        <div class="ui-grid-b">
+             <div class="ui-block-a" style="text-align: center">
+                <a href="#about" class="ui-btn ui-corner-all ui-shadow" data-transition="pop" >比賽由來</a><br>
+             </div>
+        <div class="ui-block-b" style="text-align: center">
+             <a href="#ground" class="ui-btn ui-corner-all ui-shadow" data-transition="pop" >比賽球場</a><br>
+            </div>
+        <div class="ui-block-c"  style="text-align: center">
+             <a href="#company" class="ui-btn ui-corner-all ui-shadow" data-transition="pop"> 贊助廠商</a><br>
+        </div>
+        </div>
+        </div>
+    </div>
+    <div data-role="panel" data-display="push" data-theme="b" id="nav-panel">
+        <ul data-role="listview">
+            <li data-icon="delete"><a href="#" data-rel="close">關閉選單</a></li>
+                <li><a href="2_About.html">關於WBSC</a></li>
+                <li><a href="3_Team.html">參賽隊伍</a></li>
+                <li><a href="4_Picture.html">精彩照片</a></li>
+                <li><a href="5_News.html">新聞報導</a></li>
+                <li><a href="6_Ticket.html">賽票入口</a></li>
+                <li><a href="7_Score.html">最新賽程</a></li>
+        </ul>
+    </div><!-- /panel -->
+</div>
+
+    
+    
+<div data-role="page" id="ground">
+  <div data-role="header" data-position="fixed">
+    <a href="#nav-panel" data-icon="grid" data-iconpos="notext">Menu</a>
+    <h1>比賽球場</h1>
+       <a data-icon="back"  data-iconpos  ="notext"   data-rel="back"></a>
+  </div>
+  <div data-role="content">
+      <img src="img/park.jpg" style="width: 100%;height: auto">
+   <div data-role="collapsible-set"data-collapsed-icon="arrow-r" data-expanded-icon="arrow-d" data-corners="true" data-fullscreen="true">
+    <div data-role="collapsible">
+        <h3>臺中洲際棒球場</h3>
+    
+        <ul data-role="listview">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3639.203027243008!2d120.68185331398192!3d24.199667984369846!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346917a1785a1bff%3A0x79462c8ef6f32237!2z6Ie65Lit5biC5rSy6Zqb5qOS55CD5aC0!5e0!3m2!1szh-TW!2stw!4v1450354894318" width="100%" height="auto"></iframe>
+            <li data-role="list-divider">附近飯店
+               <span class="ui-li-count">3</span>
+            </li>
+            <li>
+
+            <a href="http://gt-hotel.com.tw/"><h3>君鈦商務飯店</h3>
+            <p>406台中市北屯區大連路一段278號</p>
+            <p>04-2296-8600</p>
+            <p class="ui-li-aside">
+                <img src="icon/favourites7.png">
+                <img src="icon/favourites7.png">
+            </p>
+            </a>
+                <a href="http://gt-hotel.com.tw/"
+                    class="ui-shadow ui-btn ui-corner-all ui-btn-inline" data-transition="pop"></a>
+            </li>
+
+            <li>
+            <a href="http://www.zkhotel.com.tw/"><h3>中科大飯店</h3>
+            <p>406台中市北屯區崇德路二段256號</p>
+            <p>04-2246-5599</p>
+            <p class="ui-li-aside">
+                <img src="icon/favourites7.png">
+                <img src="icon/favourites7.png">
+                <img src="icon/favourites7.png">
+                <img src="icon/favourites7.png">
+                <img src="icon/favourites7.png">
+            </p>
+            </a>
+                
+                <a href="http://www.zkhotel.com.tw/"></a>
+            </li>
+
+            <li>
+            <a href="http://www.city-hotel.com.tw"><h3>台中香城大飯店</h3>
+            <p>406台中市北屯區柳陽東街50號</p>
+            <p>04-3606-9888</p>
+            <p class="ui-li-aside">
+                <img src="icon/favourites7.png">
+                <img src="icon/favourites7.png">
+                <img src="icon/favourites7.png">
+            </p>
+            </a>
+                 <a href="http://www.city-hotel.com.tw"></a>
+            </li>
+        </ul>
+       
+    </div>
+    <div data-role="collapsible" >
+        <h3>斗六棒球場</h3>
+        <ul data-role="listview">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3652.861065782265!2d120.53452231396889!3d23.716654984605995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346ec82e582d9a65%3A0x39cd714e64fc17b6!2z5paX5YWt5qOS55CD5aC0!5e0!3m2!1szh-TW!2stw!4v1450363623878" width="100%" height="auto"></iframe>
+            <li data-role="list-divider">附近飯店
+               <span class="ui-li-count">3</span>
+            </li>
+            <li>
+
+            <a href="http://gt-hotel.com.tw/"><h3>華安大飯店</h3>
+            <p>640雲林縣斗六市民生路156號、9樓</p>
+            <p>04-2296-2223</p>
+            <p class="ui-li-aside">
+                <img src="icon/favourites7.png">
+                <img src="icon/favourites7.png">
+            </p>
+            </a>
+                 <a href="http://gt-hotel.com.tw/"></a>
+            </li>
+
+            <li>
+            <a href="http://www.zkhotel.com.tw/"><h3>太信大飯店</h3>
+            <p>640雲林縣斗六市太平路7號</p>
+            <p>04-2246-5599</p>
+            <p class="ui-li-aside">
+                <img src="icon/favourites7.png">
+                <img src="icon/favourites7.png">
+                <img src="icon/favourites7.png">
+                <img src="icon/favourites7.png">
+            </p>
+            </a>
+                 <a href="http://www.zkhotel.com.tw/"></a>
+            </li>
+
+            <li>
+            <a href="http://www.city-hotel.com.tw"><h3>斗六真岡大飯店</h3>
+            <p>640雲林縣斗六市民生路185-3號</p>
+            <p>04-5606-9268</p>
+            <p class="ui-li-aside">
+                <img src="icon/favourites7.png">
+                <img src="icon/favourites7.png">
+                <img src="icon/favourites7.png">
+            </p>
+            </a>
+                   <a href="http://www.city-hotel.com.tw"></a>
+            </li>
+        </ul>
+          
+    </div>
+    <div data-role="collapsible" >
+        <h3>天母棒球場</h3>
+          <ul data-role="listview">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3615.994495955571!2d121.19933631400392!3d25.000302983988178!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3468216c24a26539%3A0xd1664ba93bd9a37e!2z5qGD5ZyS5ZyL6Zqb5qOS55CD5aC0!5e0!3m2!1szh-TW!2stw!4v1450363587819" width="100%" height="auto"></iframe>
+            <li data-role="list-divider">附近飯店
+               <span class="ui-li-count">3</span>
+            </li>
+            <li>
+
+            <a href="http://gt-hotel.com.tw/"><h3>君鈦商務飯店</h3>
+            <p>406台中市北屯區大連路一段278號</p>
+            <p>04-2296-8600</p>
+            <p class="ui-li-aside">
+                <img src="icon/favourites7.png">
+                <img src="icon/favourites7.png">
+            </p>
+            </a>
+            </li>
+
+            <li>
+            <a href="http://www.zkhotel.com.tw/"><h3>中科大飯店</h3>
+            <p>406台中市北屯區崇德路二段256號</p>
+            <p>04-2246-5599</p>
+            <p class="ui-li-aside">
+                <img src="icon/favourites7.png">
+                <img src="icon/favourites7.png">
+                <img src="icon/favourites7.png">
+                <img src="icon/favourites7.png">
+                <img src="icon/favourites7.png">
+            </p>
+            </a>
+            </li>
+
+            <li>
+            <a href="http://www.city-hotel.com.tw"><h3>台中香城大飯店</h3>
+            <p>406台中市北屯區柳陽東街50號</p>
+            <p>04-3606-9888</p>
+            <p class="ui-li-aside">
+                <img src="icon/favourites7.png">
+                <img src="icon/favourites7.png">
+                <img src="icon/favourites7.png">
+            </p>
+            </a>
+            </li>
+        </ul>
+    
+ 
+    </div>
+    <div data-role="collapsible" >
+        <h3>桃園國際棒球場</h3>
+         <ul data-role="listview">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3615.994495955571!2d121.19933631400392!3d25.000302983988178!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3468216c24a26539%3A0xd1664ba93bd9a37e!2z5qGD5ZyS5ZyL6Zqb5qOS55CD5aC0!5e0!3m2!1szh-TW!2stw!4v1450363587819" width="100%" height="auto"></iframe>
+            <li data-role="list-divider">附近飯店
+               <span class="ui-li-count">3</span>
+            </li>
+            <li>
+
+            <a href="http://gt-hotel.com.tw/"><h3>君鈦商務飯店</h3>
+            <p>406台中市北屯區大連路一段278號</p>
+            <p>04-2296-8600</p>
+            <p class="ui-li-aside">
+                <img src="icon/favourites7.png">
+                <img src="icon/favourites7.png">
+            </p>
+            </a>
+            </li>
+
+            <li>
+            <a href="http://www.zkhotel.com.tw/"><h3>中科大飯店</h3>
+            <p>406台中市北屯區崇德路二段256號</p>
+            <p>04-2246-5599</p>
+            <p class="ui-li-aside">
+                <img src="icon/favourites7.png">
+                <img src="icon/favourites7.png">
+                <img src="icon/favourites7.png">
+                <img src="icon/favourites7.png">
+                <img src="icon/favourites7.png">
+            </p>
+            </a>
+            </li>
+
+            <li>
+            <a href="http://www.city-hotel.com.tw"><h3>台中香城大飯店</h3>
+            <p>406台中市北屯區柳陽東街50號</p>
+            <p>04-3606-9888</p>
+            <p class="ui-li-aside">
+                <img src="icon/favourites7.png">
+                <img src="icon/favourites7.png">
+                <img src="icon/favourites7.png">
+            </p>
+            </a>
+            </li>
+        </ul>
+    
+    </div>
+
+</div>
+                 
+  </div>
+    <div data-role="footer" data-position="fixed"  >
+        <div data-role="navbar">
+        <div class="ui-grid-b">
+             <div class="ui-block-a" style="text-align: center">
+                <a href="#about" class="ui-btn ui-corner-all ui-shadow" data-transition="pop" >比賽由來</a><br>
+             </div>
+        <div class="ui-block-b" style="text-align: center">
+             <a href="#ground" class="ui-btn ui-corner-all ui-shadow" data-transition="pop" >比賽球場</a><br>
+            </div>
+        <div class="ui-block-c"  style="text-align: center">
+             <a href="#company" class="ui-btn ui-corner-all ui-shadow" data-transition="pop"> 贊助廠商</a><br>
+        </div>
+        </div>
+        </div>
+</div>
+    <div data-role="panel" data-display="push" data-theme="b" id="nav-panel">
+        <ul data-role="listview">
+            <li data-icon="delete"><a href="#" data-rel="close">關閉選單</a></li>
+                <li><a href="2_About.html">關於WBSC</a></li>
+                <li><a href="3_Team.html">參賽隊伍</a></li>
+                <li><a href="4_Picture.html">精彩照片</a></li>
+                <li><a href="5_News.html">新聞報導</a></li>
+                <li><a href="6_Ticket.html">賽票入口</a></li>
+                <li><a href="7_Score.html">最新賽程</a></li>
+        </ul>
+    </div><!-- /panel -->
+    </div>
+
+
+   
+  
+    <div data-role="page" id="company"
+     data-title ="company">
+  <div data-role="header" data-position="fixed">
+   <a href="#nav-panel" data-icon="grid" data-iconpos="notext">Menu</a>
+  <h1>贊助廠商</h1>
+       <a data-icon="back"  data-iconpos  ="notext"   data-rel="back"></a>
+  </div>
+<div data-role="content">
+ <div class="ui-grid-a">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a" style="height:40px"><a href="http://www.trk.com.tw/ " target="_blank"  data-role="none"><img src="img/1.jpg" style="height: 100% ;width:100%"></a></div></div>
+
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a" style="height:40px"><a href="http://www.1111.com.tw/ " target="_blank"  data-role="none"><img src="img/2.jpg" style="height: 100% ; width:100%"></a></div></div>
+     
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a" style="height:40px"><a href="http://www.tasty.com.tw/index.html " target="_blank"  data-role="none"><img src="img/3.jpg" style="height: 100% ;width:100%"></a></div></div>
+
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a" style="height:40px"><a href="http://www.heysong.com.tw/ " target="_blank"  data-role="none"><img src="img/4.jpg" style="height: 100% ; width:100%"></a></div></div>
+                                                                         
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a" style="height:40px"><a href="https://www.sportslottery.com.tw/zh/web/guest/home " target="_blank"  data-role="none"><img src="img/5.jpg" style="height: 100% ;width:100%"></a></div></div>
+                                                                          
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a" style="height:40px"><a href="www.transglobe.com.tw/ " target="_blank"  data-role="none"><img src="img/6.jpg" style="height: 100% ; width:100%"></a></div></div>
+                                                                       
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a" style="height:40px"><a href="http://www.trk.com.tw/ " target="_blank"  data-role="none"><img src="img/7.jpg" style="height: 100% ;width:100%"></a></div></div>
+
+    <div class="ui-block-b"><div class="ui-bar ui-bar-a" style="height:40px"><a href="http://www.trk.com.tw/ " target="_blank"  data-role="none"><img src="img/8.jpg" style="height: 100% ; width:100%"></a></div></div>
+ </div>
+ <div class="ui-grid-solo">
+    <div class="ui-block-a"><div class="ui-bar ui-bar-a" style="height:40px"><a href="https://www.hk.edu.tw/main.php " target="_blank"  data-role="none"><img src="img/9.jpg" style="height: 100% ;width:99%"></a></div></div>
+</div>
+
+  </div>
+   <div data-role="footer" data-position="fixed">
+        <div data-role="navbar">
+        <div class="ui-grid-b">
+             <div class="ui-block-a" style="text-align: center">
+                <a href="#about" class="ui-btn ui-corner-all ui-shadow" data-transition="pop" >比賽由來</a><br>
+             </div>
+        <div class="ui-block-b" style="text-align: center">
+             <a href="#ground" class="ui-btn ui-corner-all ui-shadow" data-transition="pop" >比賽球場</a><br>
+            </div>
+        <div class="ui-block-c"  style="text-align: center">
+             <a href="#company" class="ui-btn ui-corner-all ui-shadow" data-transition="pop"> 贊助廠商</a><br>
+        </div>
+        </div>
+        </div>
+</div>
+        <div data-role="panel" data-display="push" data-theme="b" id="nav-panel">
+        <ul data-role="listview">
+                <li><a href="#" data-rel="close">關閉選單</a></li>
+                <li><a href="2_About.html">關於WBSC</a></li>
+                <li><a href="3_Team.html">參賽隊伍</a></li>
+                <li><a href="4_Picture.html">精彩照片</a></li>
+                <li><a href="5_News.html">新聞報導</a></li>
+                <li><a href="6_Ticket.cshtml">賽票入口</a></li>
+                <li><a href="7_Score.html">最新賽程</a></li>
+        </ul>
+    </div>
+</div>
+
+
+
+</body>
+</html>

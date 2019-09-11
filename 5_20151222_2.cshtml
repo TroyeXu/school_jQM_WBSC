@@ -1,0 +1,22 @@
+﻿@{
+    Layout="~/layouts/Page.cshtml";
+    Page.Name = "5_20151222_2.cshtml";
+    string id = Request.QueryString["id"];
+    var db = Database.Open("NEWS");
+    string sql = "SELECT * FROM news12 WHERE id=@0";
+    var row = db.QuerySingle(sql, id);
+}
+<div data-role="page" data-add-back-btn="true">
+<div data-role="header">
+<h1>詳細新聞</h1>
+</div>
+    <div data-role="content">
+    <ul data-role="listview" data-inset="true">
+    <li>編號：@id  </li>
+    <li>標題：@row.title  </li>
+    <li>記者：@row.author  </li>
+    <li>新聞：@row.news  </li>
+    <li>日期：@row.date  </li>
+    </ul>
+    </div>
+</div>

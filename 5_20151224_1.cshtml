@@ -1,0 +1,56 @@
+﻿@{
+  Layout="~/layouts/Page.cshtml";
+  Page.Name = "5_20151224_1.cshtml";
+  string id, title, author, date;
+  title = "";
+  author = "";
+  date = "";
+  id = Request.QueryString["id"];
+  if (!IsPost) { // 不是表單送回
+    if (!id.IsEmpty()) {
+      var db = Database.Open("NEWS");
+      string sql = "SELECT * FROM news12 WHERE id=@0";
+      var row = db.QuerySingle(sql, id);
+      title = row.title;
+      author = row.author;
+      date = row.date.ToString();
+    } else {
+      Response.Redirect("~\\5_20151224.cshtml");
+    }
+  }
+  if (IsPost) {
+      var db = Database.Open("NEWS");
+      string sql = "DELETE FROM news12 WHERE id=@0";
+      db.Execute(sql, id);
+      Response.Redirect("~\\5_20151224.cshtml");
+  }
+}
+@section script {
+<script>
+$(document).bind("mobileinit",
+   function() {
+     $.mobile.ajaxEnabled = false;
+   });
+</script>
+}
+<div data-role="page">
+<div data-role="header">
+<h1>刪除</h1>
+</div>
+    <div data-role="content">
+    <ul data-role="listview" data-inset="true">
+    <li>編號：@id </li>
+    <li>標題：@title </li>
+    <li>記者：@author </li>
+    <li>日期：@date </li>
+    </ul>
+        <form method="post" action="">
+        <div data-role="fieldcontain">
+        <input type="submit" value="刪除記錄"/>
+        </div>
+        </form>
+    </div>
+       <div data-role="footer" data-position="fixed" class="ui-bar" style="text-align: center" >
+       <a href="1_OptionHome.html" class="ui-btn ui-shadow ui-corner-all " >首頁</a>
+    </div>
+</div>

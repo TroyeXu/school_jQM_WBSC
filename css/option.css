@@ -1,0 +1,27 @@
+ #page1.ui-page{
+    background: url(https://i.imgur.com/g6Jetoy.jpg) no-repeat center center fixed; 
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-size:100% 100%;
+}
+
+#buttons2 button {
+
+    background-color: transparent;
+    border: none;
+ 
+
+   
+}
+
+
+/* #button2 */
+#buttons2 button img:first-child {
+    position: absolute;
+}
+#buttons2 button img:nth-child(2) {
+    opacity: 0;
+}
+
+

@@ -1,0 +1,83 @@
+﻿@{
+    Layout="~/layouts/Page.cshtml";
+    Page.Name = "新聞更新頁";
+    string result = "";
+    Validation.Add("id", 
+        Validator.Required("請輸入新聞編號！"), 
+        Validator.StringLength(100, 0, "不能超過100個字元!"));
+    Validation.RequireField("title", "請輸入新聞標題，據實吸引人。");
+    Validation.RequireField("author", "請輸入編輯人的名字！");
+    Validation.Add("news", 
+        Validator.Required("請打出觸動人心的文章！"), 
+        Validator.StringLength(1000, 0, "不能超過1000個字元!"));
+    Validation.Add("date", 
+        Validator.DateTime("必須是日期!"));
+    if (IsPost && Validation.IsValid()) {
+    string id, title, author, news, date;
+    id = Request.Form["id"];
+    title = Request.Form["title"]; 
+    author = Request.Form["author"];
+    news = Request.Form["news"];
+    date = Request.Form["date"];
+    var db = Database.Open("NEWS");
+    string sql = "INSERT INTO news12 " + 
+            "(id, title, author, news, date) " + 
+            "VALUES (@0, @1, @2, @3, @4)";
+    db.Execute(sql, id, title, author, news, date);
+    result = "<p>成功上傳一篇火燙燙的新聞!</p>";  
+    }
+}
+@section style {
+<style>
+.field-validation-error { color: red; }
+</style>
+}
+ <div data-role="page">
+ <div data-role="header">
+        <center><h1 style="color: #32f9a3">世界12強棒球新聞</h1></center>
+        </div>
+        <div data-role="content"  style="font-family:DFKai-sb">
+           <form method="post" action="">
+           <div data-role="fieldcontain">
+             <p>新聞編輯區</p>
+             <div data-role="fieldcontain">
+             <label for="id">編號：</label>
+             <input type="text" name="id" id="id" 
+                    value="@Request.Form["id"]"/>
+              @Html.ValidationMessage("id")
+            </div>
+             <div data-role="fieldcontain">
+             <label for="title">標題：</label>
+             <input type="text" name="title" id="title" 
+                    value="@Request.Form["title"]"/>
+              @Html.ValidationMessage("title")
+            </div>
+              <div data-role="fieldcontain">
+              <label for="author">編輯人名稱：</label>
+              <input type="text" name="author" id="author" 
+                     value="@Request.Form["author"]"/>
+              @Html.ValidationMessage("author")
+             </div>
+              <div data-role="fieldcontain">
+              <label for="news">新聞內容：</label>
+              <input type="text" name="news" id="news" 
+                     value="@Request.Form["news"]"/>
+               @Html.ValidationMessage("news")
+              </div>
+               <div data-role="fieldcontain">
+               <label for="date">日期：</label>
+               <input type="text" name="date" id="date" 
+                      value="@Request.Form["date"]"/>
+               @Html.ValidationMessage("date")
+              </div>
+               <div data-role="fieldcontain">
+                <input type="submit" value="新增" data-theme="a"/>
+                    </div>
+               </div>
+                   </form>
+                   @Html.Raw(result)
+        </div>
+        <div data-role="footer" data-position="fixed" class="ui-bar" style="text-align: center" >
+       <a href="1_OptionHome.html" class="ui-btn ui-shadow ui-corner-all " >首頁</a>
+    </div>
+    </div>

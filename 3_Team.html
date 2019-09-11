@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html> 
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WBSC</title>
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+<style>
+th {
+    border-bottom: 1px solid #d6d6d6;
+}
+
+tr:nth-child(even) {
+    background: #e9e9e9;
+}
+.ui-table-columntoggle-btn {
+    display: none ;
+}
+
+</style>
+    
+</head>
+<body>
+  <div data-role="page">
+    
+      <div data-role="header" data-position="fixed">
+              <a href="#nav-panel" data-icon="grid" data-iconpos="notext" data-role="">Menu</a>
+              <h3>參賽隊伍</h3>
+            <a data-icon="back"  data-iconpos  ="notext"   data-rel="back"></a>
+        </div>
+    <div role="main" class="ui-content">
+        <ul data-role="listview" data-inset="true">
+            <li><a href="#one" >
+                <img src="pt/12c/TPE.png" class="ui-li-thumb" >
+                <h2>中華台北</h2>
+                <p>觀看更多球員資訊</p>
+            
+            </a></li>
+            <li><a href="#two">
+                <img src="pt/12c/MEX.png" class="ui-li-thumb">
+                <h2>墨西哥</h2>
+                <p>觀看更多球員資訊</p>
+            
+            </a></li>
+            <li><a href="#three">
+                <img src="pt/12c/VEN.png" class="ui-li-thumb">
+                <h2>委內瑞拉</h2>
+                <p>觀看更多球員資訊</p>
+       
+            </a></li>
+            <li><a href="four">
+                <img src="pt/12c/KOR.png"class="ui-li-thumb">
+                <h2>韓國</h2>
+                <p>觀看更多球員資訊</p>
+            </a></li>
+            <li><a href="#">
+                <img src="pt/12c/DOM.png" class="ui-li-thumb">
+                <h2>多明尼加</h2>
+                <p>觀看更多球員資訊</p>
+          
+            </a></li>
+           
+            <li><a href="#two">
+                <img src="pt/12c/USA.png"class="ui-li-thumb">
+                <h2>美國</h2>
+                <p>觀看更多球員資訊</p>
+       
+            </a></li>
+
+            <li><a href="#">
+                 <img src="pt/12c/JPN.png"class="ui-li-thumb">
+                <h2>日本</h2>
+                <p>觀看更多球員資訊</p>
+        
+            </a></li>
+
+            <li><a href="#">
+                 <img src="pt/12c/ITA.png"class="ui-li-thumb">
+                <h2>義大利</h2>
+                <p>觀看更多球員資訊</p>
+        
+            </a></li>
+
+            <li><a href="#">
+                 <img src="pt/12c/PRI.png"class="ui-li-thumb">
+                <h2>波多黎各</h2>
+                <p>觀看更多球員資訊</p>
+        
+            </a></li>
+
+            <li><a href="#">
+                 <img src="pt/12c/CAN.png"class="ui-li-thumb">
+                <h2>加拿大</h2>
+                <p>觀看更多球員資訊</p>
+        
+            </a></li>
+               <li><a href="#">
+                 <img src="pt/12c/NED.png"class="ui-li-thumb">
+                <h2>荷蘭</h2>
+                <p>觀看更多球員資訊</p>
+        
+            </a></li>
+               <li><a href="#">
+                 <img src="pt/12c/CUB.png"class="ui-li-thumb">
+                <h2>古巴</h2>
+                <p>觀看更多球員資訊</p>
+        
+            </a></li>
+        </ul>
+        </div>
+        <div data-role="footer" data-position="fixed" class="ui-bar" style="text-align: center" >
+       <a href="1_OptionHome.html" class="ui-btn ui-shadow ui-corner-all " >首頁</a>
+    </div>
+      </div>
+     
+
+
+  <div id="one" class="ui-body-d ui-content" data-role="page">
+        <div data-role="header" data-position="fixed">
+              <a href="#nav-panel" data-icon="grid" data-iconpos="notext" data-role="p">Menu</a>
+              <h3>中華隊球員</h3>
+            <a data-icon="back"  data-iconpos  ="notext"   data-rel="back"></a>
+        </div>
+ <table data-role="table" id="table-column-toggle" 
+      class="ui-responsive  ui-shadow" data-mode="columntoggle" data-filter="true"  
+       data-filter-placeholder="高國輝" >
+     <thead>
+         <tr>
+             <th >姓名</th>
+             <th >守衛</th>
+             <th >身高(cm)</th>
+             <th >體重(kg)</th>
+          </tr>
+     </thead>
+   <tbody>
+      
+         <tr>
+   
+            <td>陳禹勳</td>
+            <td>投手</td>
+            <td>182<br></td>
+            <td>83</td>
+         </tr>
+    
+     
+         <tr>
+        
+            <td>林柏佑</td>
+            <td>投手</td>
+            <td>183<br></td>
+            <td>91</td>
+         </tr>
+       
+         <tr>
+            <td>陳鴻文</td>
+            <td>投手</td>
+            <td>180<br></td>
+            <td>97</td>
+         </tr>
+
+         <tr>
+            <td>羅嘉仁</td>
+            <td>投手</td>
+            <td>180<br></td>
+            <td>90</td>
+         </tr>
+     <tr>
+            <td>陳鴻文</td>
+            <td>投手</td>
+            <td>180<br></td>
+            <td>97</td>
+         </tr>
+     <tr>
+            <td>倪福德</td>
+            <td>投手</td>
+            <td>170<br></td>
+            <td>96</td>
+         </tr>
+     <tr>
+            <td>林子崴</td>
+            <td>投手</td>
+            <td>179<br></td>
+            <td>89</td>
+         </tr>
+     <tr>
+            <td>王鏡銘</td>
+            <td>投手</td>
+            <td>184<br></td>
+            <td>77</td>
+         </tr>
+     <tr>
+            <td>陳冠宇</td>
+            <td>投手</td>
+            <td>188<br></td>
+            <td>74</td>
+         </tr>
+     <tr>
+            <td>郭俊麟</td>
+            <td>投手</td>
+            <td>183<br></td>
+            <td>94</td>
+         </tr>
+     <tr>
+            <td>羅國華</td>
+            <td>投手</td>
+            <td>192<br></td>
+            <td>90</td>
+         </tr>
+     <tr>
+            <td>呂彥青</td>
+            <td>投手</td>
+            <td>182<br></td>
+            <td>84</td>
+         </tr>
+     <tr>
+            <td>宋家豪</td>
+            <td>投手</td>
+            <td>181<br></td>
+            <td>85</td>
+         </tr><tr>
+            <td>林泓育</td>
+            <td>捕手</td>
+            <td>180<br></td>
+            <td>97</td>
+         </tr>
+     <tr>
+            <td>高志綱</td>
+            <td>捕手</td>
+            <td>178<br></td>
+            <td>75</td>
+         </tr>
+     <tr>
+            <td>張進德</td>
+            <td>捕手</td>
+            <td>180<br></td>
+            <td>97</td>
+         </tr>
+     <tr>
+            <td>郭嚴文</td>
+            <td>內野</td>
+            <td>179<br></td>
+            <td>86</td>
+         </tr>
+     <tr>
+            <td>陳俊秀</td>
+            <td>內野</td>
+            <td>183<br></td>
+            <td>97</td>
+         </tr>
+     <tr>
+            <td>林智勝</td>
+            <td>內野</td>
+            <td>183<br></td>
+            <td>100</td>
+         </tr>
+     <tr>
+            <td>林益全</td>
+            <td>內野</td>
+            <td>180<br></td>
+            <td>83</td>
+         </tr>
+     <tr>
+            <td>張進德</td>
+            <td>內野</td>
+            <td>180<br></td>
+            <td>100</td>
+         </tr>
+     <tr>
+            <td>陳鏞基</td>
+            <td>內野</td>
+            <td>179<br></td>
+            <td>83</td>
+         </tr>
+       <tr>
+            <td>林志祥</td>
+            <td>內野</td>
+            <td>173<br></td>
+            <td>74</td>
+         </tr>
+       <tr>
+            <td>蔣智賢</td>
+            <td>內野</td>
+            <td>183<br></td>
+            <td>95</td>
+         </tr>
+       <tr>
+            <td>高國輝</td>
+            <td>外野</td>
+            <td>189<br></td>
+            <td>103</td>
+         </tr>
+       <tr>
+            <td>張建銘</td>
+            <td>外野</td>
+            <td>176<br></td>
+            <td>75</td>
+         </tr>
+       <tr>
+            <td>張志豪</td>
+            <td>外野</td>
+            <td>180<br></td>
+            <td>82</td>
+         </tr>
+       <tr>
+            <td>王柏融</td>
+            <td>外野</td>
+            <td>181<br></td>
+            <td>90</td>
+         </tr>
+       <tr>
+            <td>陽岱鋼</td>
+            <td>外野</td>
+            <td>183<br></td>
+            <td>87</td>
+         </tr>
+
+          </tbody>
+     </table>
+
+  </div>
+
+
+
+
+ <div id="two" class="ui-body-d ui-content" data-role="page">
+        <div data-role="header" data-position="fixed">
+              <a href="#nav-panel" data-icon="grid" data-iconpos="notext" data-role="p">Menu</a>
+              <h3>中華隊球員</h3>
+            <a data-icon="back"  data-iconpos  ="notext"   data-rel="back"></a>
+        </div>
+ <table data-role="table" id="table-column-toggle" class="ui-responsive  ui-shadow" data-mode="columntoggle" data-filter="true"   data-filter-placeholder="Barrett" > 
+     <thead>
+         <tr>
+             <th >姓名</th>
+             <th >守衛</th>
+             <th >身高(cm)</th>
+             <th >體重(kg)</th>
+          </tr>
+     </thead>
+   <tbody>
+      
+         <tr>
+   
+            <td>Jake Barrett</td>
+            <td>投手</td>
+            <td>190<br></td>
+            <td>100</td>
+         </tr>
+    
+     
+         <tr>
+        
+            <td>Cody Forsythe</td>
+            <td>投手</td>
+            <td>183<br></td>
+            <td>77</td>
+         </tr>
+       
+         <tr>
+            <td>John Church</td>
+            <td>投手</td>
+            <td>188<br></td>
+            <td>113</td>
+         </tr>
+
+         <tr>
+            <td>Joey Denato</td>
+            <td>投手</td>
+            <td>178<br></td>
+            <td>79</td>
+         </tr>
+     <tr>
+            <td>Jarrett Grube</td>
+            <td>投手</td>
+            <td>193<br></td>
+            <td>100</td>
+         </tr>
+     <tr>
+            <td>Cody Satterwhite</td>
+            <td>投手</td>
+            <td>193<br></td>
+            <td>107</td>
+         </tr>
+     <tr>
+            <td>Seth Simmons</td>
+            <td>投手</td>
+            <td>175<br></td>
+            <td>77</td>
+         </tr>
+     <tr>
+            <td>Zeke Spruill</td>
+            <td>投手</td>
+            <td>196<br></td>
+            <td>91</td>
+         </tr>
+     <tr>
+            <td>Anthony Vazquez</td>
+            <td>投手</td>
+            <td>183<br></td>
+            <td>86</td>
+         </tr>
+     <tr>
+            <td>JB Wendelken</td>
+            <td>投手</td>
+            <td>183<br></td>
+            <td>86</td>
+         </tr>
+     <tr>
+            <td>Dana Eveland</td>
+            <td>投手</td>
+            <td>191<br></td>
+            <td>96</td>
+         </tr>
+     <tr>
+            <td>Casey Coleman</td>
+            <td>投手</td>
+            <td>185<br></td>
+            <td>107</td>
+         </tr>
+     <tr>
+            <td>Aaron Wilkerson</td>
+            <td>投手</td>
+            <td>183<br></td>
+            <td>84</td>
+         </tr><tr>
+            <td>Aaron Laffey</td>
+            <td>投手</td>
+            <td>183<br></td>
+            <td>98</td>
+         </tr>
+     <tr>
+            <td>Zack Segovia</td>
+            <td>投手</td>
+            <td>188<br></td>
+            <td>111</td>
+         </tr>
+     <tr>
+            <td>Parker Morin</td>
+            <td>捕手</td>
+            <td>180<br></td>
+            <td>88</td>
+         </tr>
+     <tr>
+            <td>Dan Rohlfing</td>
+            <td>捕手</td>
+            <td>183<br></td>
+            <td>93</td>
+         </tr>
+     <tr>
+            <td>Dan Black</td>
+            <td>內野</td>
+            <td>188<br></td>
+            <td>91</td>
+         </tr>
+     <tr>
+            <td>Gavin Cecchini</td>
+            <td>內野</td>
+            <td>188<br></td>
+            <td>102</td>
+         </tr>
+     <tr>
+            <td>Kyle Martin</td>
+            <td>內野</td>
+            <td>180<br></td>
+            <td>82</td>
+         </tr>
+     <tr>
+            <td>Tyler Pastornicky</td>
+            <td>內野</td>
+            <td>191<br></td>
+            <td>88</td>
+         </tr>
+     <tr>
+            <td>Brett Eibner</td>
+            <td>外野</td>
+            <td>178<br></td>
+            <td>82</td>
+         </tr>
+       <tr>
+            <td>Jacob May</td>
+            <td>外野</td>
+            <td>183<br></td>
+            <td>82</td>
+         </tr>
+       <tr>
+            <td>Brett Phillips</td>
+            <td>外野</td>
+            <td>188<br></td>
+            <td>98</td>
+         </tr>
+       <tr>
+            <td>Matt McBride</td>
+            <td>外野</td>
+            <td>180<br></td>
+            <td>88</td>
+         </tr>
+       <tr>
+            <td>Joe Sclafani</td>
+            <td>外野</td>
+            <td>175<br></td>
+            <td>73</td>
+         </tr>
+       <tr>
+            <td>Elliot Soto</td>
+            <td>外野</td>
+            <td>183<br></td>
+            <td>82</td>
+         </tr>
+      
+
+          </tbody>
+     </table>
+
+  </div>
+
+
+
+</div>
+  
+</body>
+</html>

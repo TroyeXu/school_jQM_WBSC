@@ -1,0 +1,37 @@
+﻿@{
+    Layout="~/layouts/Page.cshtml";
+    Page.Name = "5_20151224.cshtml";
+    var db = Database.Open("NEWS");
+    string sql = "SELECT * FROM news12";
+    var rows = db.Query(sql);
+}
+@section script {
+<script>
+    $(document).bind("mobileinit",
+    function () {
+        $.mobile.ajaxEnabled = false;
+    });
+</script>
+}
+<div data-role="page">
+<div data-role="header">
+<h1 style="color: #f6f81a">刪除</h1>
+</div>
+    <div data-role="content">
+    <ul data-role="listview" data-inset="true" style="list-style-type:square">
+    @foreach(var row in rows) {
+        <li>
+            <a>
+        <p>@row.id</p>
+            <h2>@row.title</h2>
+                <p>@row.author - @row.date</p>
+              </a>
+            <a href="~/5_20151224_1.cshtml?id=@row.id" data-icon="delete" >刪除</a>
+        </li>
+    }
+    </ul>
+    </div>
+       <div data-role="footer" data-position="fixed" class="ui-bar" style="text-align: center" >
+       <a href="1_OptionHome.html" class="ui-btn ui-shadow ui-corner-all " >首頁</a>
+    </div>
+</div>

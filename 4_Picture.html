@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html> 
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WBSC</title>
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <style>
+        iframe {
+    border: none;
+    
+}
+        img {
+   padding:1px;
+   border:1px solid #07b1f1;
+   background-color:#ff0;
+}
+    </style>
+    <script>
+        // popup examples
+$( document ).on( "pagecreate", function() {
+    // The window width and height are decreased by 30 to take the tolerance of 15 pixels at each side into account
+    function scale( width, height, padding, border ) {
+        var scrWidth = $( window ).width() - 30,
+            scrHeight = $( window ).height() - 30,
+            ifrPadding = 2 * padding,
+            ifrBorder = 2 * border,
+            ifrWidth = width + ifrPadding + ifrBorder,
+            ifrHeight = height + ifrPadding + ifrBorder,
+            h, w;
+        if ( ifrWidth < scrWidth && ifrHeight < scrHeight ) {
+            w = ifrWidth;
+            h = ifrHeight;
+        } else if ( ( ifrWidth / scrWidth ) > ( ifrHeight / scrHeight ) ) {
+            w = scrWidth;
+            h = ( scrWidth / ifrWidth ) * ifrHeight;
+        } else {
+            h = scrHeight;
+            w = ( scrHeight / ifrHeight ) * ifrWidth;
+        }
+        return {
+            'width': w - ( ifrPadding + ifrBorder ),
+            'height': h - ( ifrPadding + ifrBorder )
+        };
+    };
+    $( ".ui-popup iframe" )
+        .attr( "width", 0 )
+        .attr( "height", "auto" );
+    $( "#popupVideo" ).on({
+        popupbeforeposition: function() {
+            // call our custom function scale() to get the width and height
+            var size = scale( 497, 298, 15, 1 ),
+                w = size.width,
+                h = size.height;
+            $( "#popupVideo iframe" )
+                .attr( "width", w )
+                .attr( "height", h );
+        },
+        popupafterclose: function() {
+            $( "#popupVideo iframe" )
+                .attr( "width", 0 )
+                .attr( "height", 0 );
+        }
+    });
+});
+</script>
+</head>
+
+<body>
+
+    <div data-role="page" id="pageone">
+ <div data-role="header" data-position="fixed">
+              <a href="#nav-panel" data-icon="grid" data-iconpos="notext" data-role="p">Menu</a>
+              <h3>精彩照片</h3>
+            <a data-icon="back"  data-iconpos  ="notext"   data-rel="back"></a>
+        </div>
+
+  <div data-role="main" class="ui-content">
+
+    <div class="ui-grid-a">
+      <div class="ui-block-a">
+        <img src="pt/2/1.jpg" style="width: 100%">
+        <a href="4_3Picture.html" class="ui-btn ui-corner-all ui-shadow">啦啦隊</a><br>
+      </div>
+
+      <div class="ui-block-b">
+        <img src="pt/4/9.jpg" style="width:100%"   >
+        <a href="4_1Picture.html" class="ui-btn ui-corner-all ui-shadow">場邊粉絲</a><br>
+      </div>
+    </div>
+
+          <div class="ui-grid-a">
+      <div class="ui-block-a">
+          <img src="pt/1/6.jpg" style="width:100%"   style="text-align: center">
+        <a href="4_4Picture.html" class="ui-btn ui-corner-all ui-shadow">中華隊</a><br>
+      </div>
+
+      <div class="ui-block-b">
+     <img src="img/3hr.png" style="width:100%"  >
+         <a href="#popupVideo" data-rel="popup" data-position-to="window" class="ui-btn ui-corner-all ui-shadow">精彩影片</a>
+      </div>
+         <div data-role="popup" id="popupVideo" data-overlay-theme="b" data-theme="a" data-tolerance="15,15" class="ui-content">
+             <video width="100%" height="100%" controls>
+             <source src="video/02.mp4" type="video/mp4">
+            </video>
+</div>
+    </div>
+  </div>
+           <div data-role="footer" data-position="fixed" class="ui-bar" style="text-align: center" >
+       <a href="1_OptionHome.html" class="ui-btn ui-shadow ui-corner-all " >首頁</a>
+    </div>
+         <div data-role="panel" data-display="push" data-theme="a" id="nav-panel">
+        <ul data-role="listview">
+                <li><a href="#" data-rel="close">關閉選單</a></li>
+                <li><a href="2_About.html">關於WBSC</a></li>
+                <li><a href="3_Team.html">參賽隊伍</a></li>
+                <li><a href="4_Picture.html">精彩照片</a></li>
+                <li><a href="5_20151222_1.cshtml">新聞報導</a></li>
+                <li><a href="6_Ticket.cshtml">賽票入口</a></li>
+                <li><a href="7_Score.html">最新賽程</a></li>
+        </ul>
+    </div><!-- /panel -->
+</div> 
+
+
+
+</body>
+</html>

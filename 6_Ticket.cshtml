@@ -1,0 +1,183 @@
+﻿@{
+  Layout="~/layouts/_Mobile.cshtml";
+  Page.Name = "6_Ticket.cshtml";
+  string result = "" ,accept, type;
+  type="";
+  if (IsPost) { // 是否是表單送回
+     string user,like,clock="",date="";
+     string baseballt="",levelt="";
+     int postion;
+    
+     user = Request.Form["user"];
+     postion = Request.Form["postion"].AsInt();
+     like = Request.Form["updated"];
+     baseballt =Request.Form["baseball"];
+     levelt=Request.Form["level"];
+     clock = Request.Form["clock"];
+     date = Request.Form["date"];
+   
+  
+     int s;
+     accept = Request.Form["accept"];
+     s = Request.Form["a"].AsInt();
+     if (s == 1) {
+        type += "綠茶|"; 
+     }
+     s = Request.Form["b"].AsInt();
+     if (s == 2) {
+        type += "紅茶|"; 
+     }
+     s = Request.Form["c"].AsInt();
+     if (s == 3) {
+        type += "奶茶|";
+     }
+
+     
+     int baseball;
+
+     baseball = Request.Form["baseball"].AsInt();
+     switch(baseball) {
+     case 1: baseballt = "臺中洲際棒球場"; break;
+     case 2: baseballt = "斗六棒球場"; break;
+     case 3: baseballt = "天母棒球場"; break;
+     case 4: baseballt = "桃園國際棒球場";break;
+     }
+
+     int level;
+ 
+     level = Request.Form["level"].AsInt();
+     switch(level) {
+     case 1:levelt = "中央區"; break;
+     case 2:levelt = "內野區下層"; break;
+     case 3:levelt = "外野下層"; break;
+     case 4:levelt = "外野自由";break;
+     }
+
+     result = "姓名:"+user+"///"+ "飲料:"+type+"///"+ "位置:"+postion+"///"+"時間:"+clock+"///"+ "日期:"+date+"///"+
+              "服務滿意:"+like+"///"+"棒球場:"+baseballt+"///"+
+              "球場區域:"+levelt+"///"+"是否同意授權:"+accept;
+
+  }
+  }
+
+
+<div data-role="page">
+   <div data-role="header" data-position="fixed">
+              <a href="#nav-panel" data-icon="grid" data-iconpos="notext" data-role="p">Menu</a>
+              <h3>售票區</h3>
+            <a data-icon="back"  data-iconpos  ="notext"   data-rel="back"></a>
+        </div>
+  <div data-role="content">
+
+    
+
+    <form method="post" action="">
+
+      <div id="userDiv" data-role="fieldcontain">
+        <label for="user">姓名: </label>
+        <input type="text" name="user" id="user"/>
+      </div>
+
+     
+      <div data-role="fieldcontain">
+        <fieldset data-role="controlgroup" data-type="horizontal" data-mini="true">
+          <legend>免費飲料</legend>
+          <label for="a">綠茶</label>
+          <input type="checkbox" name="a" id="a" value="1" checked/>
+          <label for="b">紅茶</label>
+          <input type="checkbox" name="b" id="b" value="2"/>
+          <label for="c">奶茶</label>
+          <input type="checkbox" name="c" id="c" value="3"/> 
+        </fieldset>
+      </div>
+
+ <div data-role="fieldcontain">
+        <label for="baseball">棒球場</label>
+         <select name="baseball" id="baseball">
+                 <option value="1">臺中洲際棒球場</option>
+                 <option value="2">斗六棒球場</option>
+                 <option value="3">天母棒球場</option>
+                 <option value="4">桃園國際棒球場</option>
+        </select>
+     </div>
+
+  <div data-role="fieldcontain">
+        <label for="level">選擇球場區域 </label>
+        <select name="level" id="level" data-native-menu="false">
+          <option value="1">中央區</option>
+          <option value="2">內野下層</option>
+          <option value="3">外野下層</option>
+          <option value="4">外野自由</option>
+        </select> 
+      </div>
+
+       <div class="ui-field-contain">
+          <label for="postion">位置</label>
+         <input type="range" name="postion" id="postion" value="50" min="0" max="100" data-highlight="true">
+       </div>
+
+        <p class="budget">價錢<p>
+        <label for="range">
+        <input type="range" name="range" id="range" min="100" max="400" step="100" value="100"/>
+        </label>
+        <output for="range" class="output"></output>
+
+         <div data-role="fieldcontain">
+           <label for="clock">選擇時間 </label>
+           <div class="input-group clockpicker">
+                <input type="text" class="form-control" value="09:30" id="clock" name="clock">
+                <span class="input-group-addon">
+                    <span class="glyphicon glyphicon-time"></span>
+                </span>
+           </div>
+             </div>
+            <script type="text/javascript">
+            $('.clockpicker').clockpicker();
+            </script>
+
+          <div id="dateDiv" data-role="fieldcontain">
+                 <label for="date">日期 </label>
+                    <input type="text" name="date" data-role="date" id="date" class="date-input-css"/>
+            </div>
+        <script>
+		$(function(){
+			$( ".date-input-css" ).datepicker();
+		})
+	</script>
+      
+
+        <div data-role="fieldcontain">
+        <label for="updated">喜歡我們的服務嗎?</label>
+        <select name="updated" id="updated" data-role="slider">
+          <option value="喜歡">否</option>
+          <option value="不喜歡">是</option>
+        </select> 
+      </div>
+
+        <div data-role="fieldcontain">
+        <label for="accept">同意買票注意事項</label>
+        <input type="checkbox" name="accept" id="accept" value="同意" checked/>
+      </div>
+   
+
+      <div id="btnDiv" data-role="fieldcontain">
+        <button class="ui-shadow ui-btn ui-corner-all" type="submit" id="submit-2">送出</button>
+      </div>
+         <div data-role="footer" data-position="fixed" class="ui-bar" style="text-align: center" >
+       <a href="1_OptionHome.html" class="ui-btn ui-shadow ui-corner-all " >首頁</a>
+    </div>
+    </form>
+    @result
+  </div>
+     <div data-role="panel" data-display="push" data-theme="a" id="nav-panel">
+        <ul data-role="listview">
+                <li><a href="#" data-rel="close">關閉選單</a></li>
+                <li><a href="2_About.html">關於WBSC</a></li>
+                <li><a href="3_Team.html">參賽隊伍</a></li>
+                <li><a href="4_Picture.html">精彩照片</a></li>
+                <li><a href="5_20151222_1.cshtml">新聞報導</a></li>
+                <li><a href="6_Ticket.cshtml">賽票入口</a></li>
+                <li><a href="7_Score.html">最新賽程</a></li>
+        </ul>
+    </div><!-- /panel -->
+</div>

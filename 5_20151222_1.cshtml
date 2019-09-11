@@ -1,0 +1,59 @@
+﻿@{
+    Layout="~/layouts/Page.cshtml";
+    Page.Name = "5_20151222_1.cshtml";
+    var db = Database.Open("NEWS");
+    string sql;
+    sql = "SELECT * FROM news12";
+    var data = db.Query(sql);
+    var grid = new WebGrid( source : data,
+                defaultSort : "author",
+                rowsPerPage : 10);
+}
+@section style {
+<style>
+.title { font-weight: bold; }
+</style>
+}
+
+<div data-role="page">
+
+<div data-role="header" data-position="fixed">
+              <a href="#nav-panel" data-icon="grid" data-iconpos="notext" data-role="p">Menu</a>
+              <h3>熱門新聞</h3>
+            <a data-icon="back"  data-iconpos  ="notext"   data-rel="back"></a>
+        </div>
+
+    <div data-role="content">
+      
+    @grid.GetHtml(
+        tableStyle : "grid",
+        columns : grid.Columns(
+        grid.Column(format :
+          @<a href="~/5_20151222_2.cshtml?id=@item["id"]"
+            data-role="button" data-inline="true"
+            data-icon="info" data-iconpos="notext"></a>),
+        grid.Column("title", "標題" , style : "title"),
+        grid.Column("author", "記者",
+          format : @<text>@item["author"]</text>)
+                                         )
+                                         )
+       
+    </div>
+     <div data-role="footer" data-position="fixed" >
+        <div data-role="navbar">
+        <div class="ui-grid-b">
+             <div class="ui-block-a" style="text-align: center">
+                <a href="5_20151223.cshtml" class="ui-btn ui-corner-all ui-shadow" data-transition="pop" >新增</a><br>
+             </div>
+        <div class="ui-block-b" style="text-align: center">
+             <a href="1_OptionHome.html" class="ui-btn ui-corner-all ui-shadow" data-transition="pop" >首頁</a><br>
+            </div>
+        <div class="ui-block-c"  style="text-align: center">
+             <a href="5_20151224.cshtml" class="ui-btn ui-corner-all ui-shadow" data-transition="pop">刪除</a><br>
+        </div>
+        </div>
+        </div>
+    </div>
+
+
+</div>

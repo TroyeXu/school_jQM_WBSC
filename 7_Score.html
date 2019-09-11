@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html> 
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WBSC</title>
+<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+<style>
+th {
+    border-bottom: 1px solid #d6d6d6;
+}
+
+tr:nth-child(even) {
+    background: #e9e9e9;
+}
+   
+</style>
+    
+</head>
+<body>
+       <div data-role="header" data-position="fixed">
+              <a href="#nav-panel" data-icon="grid" data-iconpos="notext" data-role="p">Menu</a>
+              <h3>比賽隊伍</h3>
+            <a data-icon="back"  data-iconpos  ="notext"   data-rel="back"></a>
+        </div>
+        
+    <div data-role="tabs" id="tabs">
+  <div data-role="navbar">
+    <ul>
+      <li><a href="#one" data-ajax="true">八強賽</a></li>
+      <li><a href="#two" data-ajax="true">八強賽</a></li>
+      <li><a href="#three" data-ajax="true">決賽</a></li>
+    </ul>
+  </div>
+  <div id="one" class="ui-body-d ui-content">
+
+ <table data-role="table" id="table-column-toggle" data-mode="columntoggle" class="ui-responsive table-stroke ui-shadow" data-column-btn-text="更多資料">
+     <thead>
+         <tr  class="ui-bar-e">
+             <th data-priority="4">場次</th>
+             <th data-priority="5">日期</th>
+             <th data-priority="6">時間</th>
+             <th data-priority="3">組別</th>
+             <th data-priority="7">主隊</th>
+             <th data-priority="8">比分</th>
+             <th data-priority="9">客隊</th>
+             <th data-priority="1">比賽地點</th>
+             <th data-priority="2">電視轉播</th>
+          </tr>
+     </thead>
+   <tbody>
+      
+         <tr>
+            <th>31</th>
+            <td>11/16</td>
+            <td>12:30</td>
+            <td>8強<br></td>
+            <td>加拿大</td>
+            <td>3-4</td>
+            <td>墨西哥 </td>
+            <td>洲際</td>
+            <td>緯來育樂台</td>
+         </tr>
+      
+        <tr>
+            <th>32</th>
+            <td>11/16 </td>
+            <td>18:30</td>
+            <td>8強</td>
+            <td>古巴</td>
+            <td>2-7<br></td>
+            <td>韓國<br>
+            </td>
+            <td>洲際</td>
+            <td>緯來育樂台  </td>
+            </tr>
+      
+       <tr>
+            <th>33</th>
+            <td>11/16<br>
+            </td>
+            <td>12:30<br></td>
+            <td>8強</td>
+            <td>美國</td>
+            <td>6-1<br></td>
+            <td>荷蘭 </td>
+            <td>桃園<br></td>
+            <td>緯來體育台 </td>
+           </tr>
+      
+           <tr>
+               <th>34<br></th>
+             <td>11/16 </td>
+                <td>18:30</td>
+                 <td>8強</td>
+                 <td>日本</td>
+                 <td>9-3<br></td>
+                 <td>波多黎各 </td>
+                 <td>桃園</td>
+                <td>緯來體育台 </td>
+                </tr>
+      
+          </tbody>
+     </table>
+
+  </div>
+
+
+
+
+
+
+<div id="two">
+    </br>
+<table data-role="table" id="table-column-toggle" data-mode="columntoggle" class="ui-responsive table-stroke ui-shadow" data-column-btn-text="更多資料">
+     <thead>
+         <tr  class="ui-bar-e">
+             <th data-priority="4">場次</th>
+             <th data-priority="5">日期</th>
+             <th data-priority="6">時間</th>
+             <th data-priority="3">組別</th>
+             <th data-priority="7">主隊</th>
+             <th data-priority="8">比分</th>
+             <th data-priority="9">客隊</th>
+             <th data-priority="1">比賽地點</th>
+             <th data-priority="2">電視轉播</th>
+          </tr>
+     </thead>
+   <tbody>
+      
+         <tr>
+            <th>36</th>
+            <td>11/19</td>
+            <td>18:00</td>
+            <td>4強<br></td>
+            <td>日本</td>
+            <td>3-4</td>
+            <td>韓國 </td>
+            <td>東京</td>
+            <td>緯來精采台</td>
+         </tr>
+      
+        <tr>
+            <th>32</th>
+            <td>11/16 </td>
+            <td>18:30</td>
+            <td>8強</td>
+            <td>古巴</td>
+            <td>2-7<br></td>
+            <td>韓國<br>
+            </td>
+            <td>洲際</td>
+            <td>緯來育樂台  </td>
+            </tr>
+      
+       <tr>
+            <th>35</th>
+            <td>11/20<br>
+            </td>
+            <td>18:00<br></td>
+            <td>4強</td>
+            <td>美國</td>
+            <td>6-1<br></td>
+            <td>墨西哥 </td>
+            <td>東京<br></td>
+            <td>公視HD </td>
+           </tr>
+      
+       
+      
+          </tbody>
+     </table>
+
+  </div>
+
+        
+<div id="three">
+    </br>
+    <table data-role="table" id="table-column-toggle" data-mode="columntoggle" class="ui-responsive table-stroke ui-shadow" data-column-btn-text="更多資料">
+     <thead>
+         <tr  class="ui-bar-e">
+             <th data-priority="4">場次</th>
+             <th data-priority="5">日期</th>
+             <th data-priority="6">時間</th>
+             <th data-priority="3">組別</th>
+             <th data-priority="7">主隊</th>
+             <th data-priority="8">比分</th>
+             <th data-priority="9">客隊</th>
+             <th data-priority="1">比賽地點</th>
+             <th data-priority="2">電視轉播</th>
+          </tr>
+     </thead>
+   <tbody>
+      
+         <tr>
+            <th>37</th>
+            <td>11/21</td>
+            <td>12:00</td>
+            <td>季軍戰<br></td>
+            <td>墨西哥</td>
+            <td>1-11</td>
+            <td>日本 </td>
+            <td>東京</td>
+            <td>緯來精采台</td>
+         </tr>
+      
+        <tr>
+            <th>38</th>
+            <td>11/16 </td>
+            <td>18:00</td>
+            <td>冠軍戰</td>
+            <td>美國</td>
+            <td>0-8<br></td>
+            <td>韓國<br>
+            </td>
+            <td>東京</td>
+            <td>緯來育樂台</td>
+            </tr>
+      
+       <tr>
+           
+       
+      
+          </tbody>
+     </table>
+
+
+</div>
+       <div data-role="footer" data-position="fixed" class="ui-bar" style="text-align: center" >
+       <a href="1_OptionHome.html" class="ui-btn ui-shadow ui-corner-all " >首頁</a>
+    </div>
+        <div data-role="panel" data-display="push" data-theme="a" id="nav-panel">
+        <ul data-role="listview">
+                <li><a href="#" data-rel="close">關閉選單</a></li>
+                <li><a href="2_About.html">關於WBSC</a></li>
+                <li><a href="3_Team.html">參賽隊伍</a></li>
+                <li><a href="4_Picture.html">精彩照片</a></li>
+                <li><a href="5_20151222_1.cshtml">新聞報導</a></li>
+                <li><a href="6_Ticket.cshtml">賽票入口</a></li>
+                <li><a href="7_Score.html">最新賽程</a></li>
+        </ul>
+    </div><!-- /panel -->
+</div>
+
+</body>
+</html>
